@@ -1,0 +1,36 @@
+function gretter(myArray,counter)
+{
+	const greetText= 'Hello';
+	for(var value in myArray)
+	{
+		console.log(greetText + " " + myArray[value]);
+	}
+
+}
+gretter(['Randy Savage','Ric Flair','Hulk Hogan'],3);
+
+const capitalize = ([first,...rest])=>
+{
+	first = first.toUpperCase();
+	console.log(first);
+	console.log(rest);
+	return first+rest;
+}
+console.log(capitalize('foobar'));
+console.log(capitalize('nodeJS'));
+
+const colors = ['red','green','blue'];
+
+console.log(colors.map(capitalize));
+
+const values = [1,60,34,30,20,5];
+
+const filterLessThan20 = values.filter(value => value <20);
+console.log(filterLessThan20);
+
+const array3 = [1,2,3,4];
+const reducer = (accumulator,currentValue)=> accumulator + currentValue;
+const multi = (accumulator,currentValue)=> accumulator * currentValue;
+console.log(array3.reduce(reducer));
+console.log(array3.reduce(multi));
+
